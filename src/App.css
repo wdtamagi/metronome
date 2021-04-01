@@ -11,4 +11,5 @@
   width: 5px;
   background-color: aliceblue;
   border-radius: 2px;
+  transform-origin: bottom center;
 }
