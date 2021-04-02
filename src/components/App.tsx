@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css, jsx } from "@emotion/react";
+import { css } from "@emotion/react";
 import React, { FC } from "react";
 import { Bump } from "./Bump";
 import { Control } from "./Control";

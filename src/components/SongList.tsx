@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css, jsx } from "@emotion/react";
+import { css } from "@emotion/react";
 import React, { FC, useEffect } from "react";
 import { useStore } from "../store/useStore";
 
@@ -10,6 +10,7 @@ export const SongList: FC = () => {
 
   useEffect(() => {
     fetchBpmList(bpm);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

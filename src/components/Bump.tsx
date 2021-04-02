@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css, jsx, keyframes } from "@emotion/react";
+import { css, keyframes } from "@emotion/react";
 import React, { FC } from "react";
 import { useStore } from "../store/useStore";
 
