@@ -14,7 +14,7 @@ const bumpShapeStyle = css`
 
 const bumpAnimation = keyframes`
   100% {
-    transform: scale(2);
+    transform: scale(2.5);
     opacity: 0;
   }
 `;
