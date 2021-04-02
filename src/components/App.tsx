@@ -1,12 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css, jsx } from "@emotion/react";
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { Bump } from "./Bump";
 import { Control } from "./Control";
 import { SongList } from "./SongList";
 
 export const App: FC = () => {
-  const [bpm, setBpm] = useState(72);
   return (
     <div
       css={css`
@@ -28,8 +27,8 @@ export const App: FC = () => {
       >
         DIGITAL METRONOME
       </h1>
-      <Bump bpm={bpm} />
-      <Control bpm={bpm} handleClick={setBpm} />
+      <Bump />
+      <Control />
       <SongList />
     </div>
   );

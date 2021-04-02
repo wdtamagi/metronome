@@ -1,14 +1,17 @@
 /** @jsxImportSource @emotion/react */
 import { css, jsx } from "@emotion/react";
 import React, { FC } from "react";
+import { useStore } from "../store/useStore";
 
 interface BpmButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   value: number;
-  active: boolean;
 }
-export const BpmButton: FC<BpmButtonProps> = ({ value, active, ...props }) => {
+export const BpmButton: FC<BpmButtonProps> = ({ value, ...props }) => {
+  const bpm = useStore((s) => s.bpm);
+  const updateBpm = useStore((s) => s.updateBpm);
   return (
     <button
+      onClick={() => updateBpm(value)}
       css={css`
         display: grid;
         place-items: center;
@@ -24,7 +27,7 @@ export const BpmButton: FC<BpmButtonProps> = ({ value, active, ...props }) => {
         outline: none;
         cursor: pointer;
 
-        ${active
+        ${value === bpm
           ? `
           color: rgb(22, 16, 32);
           background: rgb(142, 172, 255);  

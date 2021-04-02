@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, jsx, keyframes } from "@emotion/react";
 import React, { FC } from "react";
+import { useStore } from "../store/useStore";
 
 const BPM_BASE = 60000;
 const BUMP_HEIGHT = 132;
@@ -18,10 +19,8 @@ const bumpAnimation = keyframes`
   }
 `;
 
-interface BumpProps {
-  bpm: number;
-}
-export const Bump: FC<BumpProps> = ({ bpm }) => {
+export const Bump: FC = () => {
+  const bpm = useStore((s) => s.bpm);
   const duration = BPM_BASE / bpm;
 
   return (

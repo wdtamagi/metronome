@@ -5,11 +5,7 @@ import { BpmButton } from "./BpmButton";
 
 const BPM_LIST = [72, 74, 82, 84, 128, 138];
 
-interface ControlProps {
-  bpm: number;
-  handleClick: (state: number) => void;
-}
-export const Control: FC<ControlProps> = ({ bpm, handleClick }) => {
+export const Control: FC = () => {
   return (
     <div
       css={css`
@@ -21,12 +17,7 @@ export const Control: FC<ControlProps> = ({ bpm, handleClick }) => {
       `}
     >
       {BPM_LIST.map((value) => (
-        <BpmButton
-          key={value}
-          value={value}
-          active={bpm === value}
-          onClick={() => handleClick(value)}
-        />
+        <BpmButton key={value} value={value} />
       ))}
     </div>
   );
