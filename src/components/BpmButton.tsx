@@ -9,6 +9,7 @@ interface BpmButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const BpmButton: FC<BpmButtonProps> = ({ value, ...props }) => {
   const bpm = useStore((s) => s.bpm);
   const updateBpm = useStore((s) => s.updateBpm);
+
   return (
     <button
       onClick={() => updateBpm(value)}

@@ -1,8 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import { css, jsx } from "@emotion/react";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
+import { useStore } from "../store/useStore";
 
 export const SongList: FC = () => {
+  const fetchBpmList = useStore((s) => s.fetchBpmList);
+
+  useEffect(() => {
+    fetchBpmList();
+  }, []);
+
   return (
     <div
       css={css`
