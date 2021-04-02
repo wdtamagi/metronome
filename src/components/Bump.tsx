@@ -14,7 +14,7 @@ const bumpShapeStyle = css`
 
 const bumpAnimation = keyframes`
   100% {
-    transform: scale(2.5);
+    transform: scale(2) rotate(360deg);
     opacity: 0;
   }
 `;
@@ -59,6 +59,7 @@ export const Bump: FC = () => {
         css={[
           bumpShapeStyle,
           css`
+            border-radius: 40%;
             background: radial-gradient(
               ellipse 100% 100% at 50% 50%,
               rgb(100, 188, 164) 0%,
@@ -67,7 +68,7 @@ export const Bump: FC = () => {
             animation: ${bumpAnimation} ${duration}ms ease infinite;
           `,
         ]}
-      ></div>
+      />
     </div>
   );
 };
