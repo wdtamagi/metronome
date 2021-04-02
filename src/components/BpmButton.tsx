@@ -39,7 +39,7 @@ export const BpmButton: FC<BpmButtonProps> = ({ value, ...props }) => {
         `}
 
         &:hover {
-          background: rgba(142, 172, 255, 0.3);
+          ${value !== bpm ? "background: rgba(142, 172, 255, 0.3);" : ""}
         }
       `}
       {...props}
