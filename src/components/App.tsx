@@ -11,8 +11,8 @@ export const App: FC = () => {
       css={css`
         display: flex;
         align-items: center;
-        justify-content: center;
         flex-direction: column;
+        padding-top: 100px;
       `}
     >
       <h1
